@@ -35,6 +35,8 @@ fetch(apiURL, {
     document.getElementById("firstNewHeader").textContent = image1_name;
     document.getElementById("firstNewExplain").textContent = image1_description;
     document.getElementById("firstNewSource").textContent = image1_source;
+
+    document.getElementById("firstNewAHref").href = image1_url;
   })
   .catch((error) => {
     console.error("Bir hata oluştu:", error);

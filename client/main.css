@@ -50,3 +50,70 @@ body {
   color: red;
   font-weight: 600;
 }
+.firstNewIcon {
+  display: flex;
+  justify-content: space-around;
+  width: 10vh;
+}
+#firstNewHeader {
+  font-weight: bold;
+}
+#firstNewSource {
+  font-weight: 300;
+  font-size: small;
+}
+.breakingNews {
+  background-color: #c31815;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+}
+#breakingNewsP {
+  background-color: white;
+  color: red;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#breakingNewsExp {
+  color: white;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  transform: translate(0%, 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsFilter {
+  width: 100%;
+  background-color: white;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsFilter a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#newsUpChatagories {
+  display: flex;
+  justify-content: flex-start;
+}
+.newsIcon i {
+  font-size: large;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  width: 48%;
+}
