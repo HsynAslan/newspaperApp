@@ -20,7 +20,33 @@ body {
   color: black;
   margin-top: 2vh;
 }
+.nav_icons i {
+  margin-top: 3vh;
+  color: black;
+}
 .nav_links i {
   margin-top: 3vh;
   color: black;
+}
+.color1 {
+  background-color: #f1f2f3;
+}
+.firstNew img {
+  height: 30%;
+}
+.firstNewIcons {
+  display: flex;
+  justify-content: space-between;
+}
+#firstNewPicture {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.firstNewIcons p {
+  color: red;
+  font-weight: 600;
 }

@@ -1,37 +1,41 @@
-var data = null;
+// API adresi ve API anahtarınızı tanımlayın
+const apiURL = "https://api.collectapi.com/news/getNews?country=tr&tag=general";
+const apiKey = "31F0Bx2P6I54kfDmifzBN0:2kD2Yo7lL9B0NLEkVWlo0U";
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+// fetch() ile API'den verileri çekin
+fetch(apiURL, {
+  headers: {
+    Authorization: `apikey ${apiKey}`,
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // Key değeri 1 olan nesnenin image bilgisini alın
+    // const targetObject = data.result.find((item) => item.key === "1");
+    // const image = targetObject.image;
+    // Alınan image bilgisini kullanarak istediğiniz işlemi yapın
+    // console.log("Key 1 olan nesnenin image bilgisi:", image);
 
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    var response = this.responseText;
-  }
-});
+    const targetObject = data.result.find((item) => item.key === "1");
+    const image1_url = targetObject.url;
 
-// xhr.addEventListener("readystatechange", function () {
-//     if (this.readyState === this.DONE) {
-//       var response = JSON.parse(this.responseText);
-//       var news = response.result;
+    const targetObject2 = data.result.find((item) => item.key === "1");
+    const image1_description = targetObject2.description;
 
-//       for (var i = 0; i < news.length; i++) {
-//         if (news[i].key === "2") {
-//           var url = news[i].url;
-//           console.log(url);
-//           break;
-//         }
-//       }
-//     }
-//   });
+    const targetObject3 = data.result.find((item) => item.key === "1");
+    const image1_image = targetObject3.image;
 
-xhr.open(
-  "GET",
-  "https://api.collectapi.com/news/getNews?country=tr&tag=general"
-);
-xhr.setRequestHeader("content-type", "application/json");
-xhr.setRequestHeader(
-  "authorization",
-  "apikey 31F0Bx2P6I54kfDmifzBN0:2kD2Yo7lL9B0NLEkVWlo0U"
-);
+    const targetObject4 = data.result.find((item) => item.key === "1");
+    const image1_name = targetObject4.name;
 
-xhr.send(data);
+    const targetObject5 = data.result.find((item) => item.key === "1");
+    const image1_source = targetObject5.source;
+
+    document.getElementById("firstNewPicture").src = image1_image;
+    document.getElementById("firstNewHeader").textContent = image1_name;
+    document.getElementById("firstNewExplain").textContent = image1_description;
+    document.getElementById("firstNewSource").textContent = image1_source;
+  })
+  .catch((error) => {
+    console.error("Bir hata oluştu:", error);
+  });
