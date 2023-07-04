@@ -1,0 +1,26 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+#nbc_image {
+  height: 8vh;
+}
+.nav_icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vh;
+  color: black;
+}
+.nav_links {
+  display: flex;
+  justify-content: space-around;
+}
+.nav_links a {
+  text-decoration: none;
+  color: black;
+  margin-top: 2vh;
+}
+.nav_links i {
+  margin-top: 3vh;
+  color: black;
+}

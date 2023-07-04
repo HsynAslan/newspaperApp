@@ -1,0 +1,43 @@
+<head>
+  <title>newspaperApp3</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
+  />
+  <script src="/client/scripts/script.js"></script>
+</head>
+
+<body>
+  {{> navbar}}
+  <script
+    src="https://kit.fontawesome.com/65d77346e4.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+<template name="navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="/pictures/nbcnews_color_2_8.jpg" alt="NBC" id="nbc_image" />
+      </div>
+      <div class="col-9 nav_links">
+        <a href="#">Corona Updates</a>
+        <a href="#">Politics</a>
+        <a href="#">Bussiness</a>
+        <a href="#">Sports</a>
+        <a href="#">World</a>
+        <a href="#">Travel</a>
+        <a href="#">Podcasts</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <!-- <ul id="linkList"></ul> -->
+      </div>
+      <div class="col-2 nav_icons">
+        <i class="fa-regular fa-user" onclick=""></i>
+        <i class="fa-solid fa-magnifying-glass" onclick=""></i>
+        <i class="fa-solid fa-bars" onclick=""></i>
+      </div>
+    </div>
+  </div>
+</template>
