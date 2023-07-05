@@ -116,4 +116,36 @@ body {
 }
 .card {
   width: 48%;
+  height: auto;
+  margin-bottom: 5vh;
+}
+
+.card_icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+.oneNewHeader {
+  font-weight: bold;
+}
+.oneNewHeaderRow {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 6px;
+}
+
+.oneNewExplain {
+  font-size: small;
+}
+.oneNewExplainRow {
+  padding-left: 15px;
+  padding-right: 6px;
+}
+.oneNewSourceRow {
+  padding-left: 15px;
+  padding-right: 6px;
 }
