@@ -149,3 +149,129 @@ body {
   padding-left: 15px;
   padding-right: 6px;
 }
+#livePicture {
+  width: 100%;
+}
+#liveExplain {
+  font-weight: bold;
+  margin-top: 1vh;
+}
+.locationNews {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.locationNewInput {
+  width: 100%;
+}
+.locationNewButton button {
+  background-color: #c31815;
+  color: white;
+  width: 12vh;
+  height: 5vh;
+}
+.liveIcon {
+  display: flex;
+  justify-content: flex-start;
+}
+.upCarosel {
+  display: flex;
+  justify-content: flex-start;
+}
+.footerAbout {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.footerAbout a {
+  width: 15vh;
+  text-decoration: none;
+}
+.footer-2 {
+  background-color: #0e1e32;
+}
+.colorWhite {
+  color: white;
+}
+.nbcFooter img {
+  width: auto;
+  background: transparent;
+}
+.footerUnderImage {
+  font-weight: 400;
+  font-size: small;
+}
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+.footerCenter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.width5vh {
+  width: 5vh;
+}
+.footerIcon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+}
+.carouselNews {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+  align-content: center;
+  align-items: center;
+}
+.carouselImage {
+  height: 100%;
+}
+.carouselNew {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.carouselHeader {
+  font-size: large;
+  font-weight: bold;
+}
+.carouselText {
+  font-size: small;
+}
+.carouselHeaderText {
+  width: 50%;
+}
+.carouselImageDiv {
+  height: 20vh;
+}
+.moreNewsClass {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.moreNewsClass button {
+  color: #c31815;
+  border-color: #c31815;
+  border: solid 1px;
+  padding-left: 5vh;
+  padding-top: 2vh;
+  padding-right: 5vh;
+  padding-bottom: 2vh;
+}

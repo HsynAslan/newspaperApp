@@ -20,19 +20,62 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img src="/pictures/nbcnews_color_2_8.jpg" alt="NBC" id="nbc_image" />
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('general')"
+          data-tag="general"
+          ><img src="/pictures/nbcnews_color_2_8.jpg" alt="NBC" id="nbc_image"
+        /></a>
       </div>
       <div class="col-9 nav_links">
-        <a href="#">Corona Updates</a>
-        <a href="#">Politics</a>
-        <a href="#">Bussiness</a>
-        <a href="#">Sports</a>
-        <a href="#">World</a>
-        <a href="#">Travel</a>
-        <a href="#">Podcasts</a>
+        <!-- <button onclick="changeTag('general')">Corona Updates</button> -->
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('corona')"
+          data-tag="corona"
+          >Corona Updates</a
+        >
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('politics')"
+          data-tag="politics"
+          >Politics</a
+        >
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('business')"
+          data-tag="business"
+          >Business</a
+        >
+        <a href="/client/about.html">Sports</a>
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('world')"
+          data-tag="world"
+          >World</a
+        >
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('travel')"
+          data-tag="travel"
+          >Travel</a
+        >
+        <a
+          href="#"
+          class="tagLink"
+          onclick="changeTag('podcasts')"
+          data-tag="podcasts"
+          >Podcasts</a
+        >
         <i class="fa-solid fa-chevron-right"></i>
-        <!-- <ul id="linkList"></ul> -->
       </div>
+
       <div class="col-2 nav_icons">
         <i class="fa-regular fa-user" onclick=""></i>
         <i class="fa-solid fa-magnifying-glass" onclick=""></i>
@@ -40,12 +83,13 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid color1 pt-4">
+
+  <div class="container-fluid color1 pt-4" id="mainPageDiv">
     <div class="container">
       <div class="row firstNew">
         <div class="col">
-          <a href="#" target="_blank" id="firstNewAHref">
-            <img src="" alt="Resim" id="firstNewPicture"
+          <a href="#" id="firstNewAHref" target="_blank">
+            <img src="" alt="Resim" id="firstNewPicture" class="everyPicture"
           /></a>
         </div>
         <div class="col pt-lg-5 pb-lg-5 ps-4">
@@ -107,18 +151,126 @@
               </div>
             </div> -->
           </div>
-          <button class="moreNews">Daha Fazla</button>
+          <div class="moreNewsClass">
+            <button class="moreNews">VIEW MORE</button>
+          </div>
         </div>
         <div class="col-4">
           <div>
-            <div class="row">Live</div>
+            <div class="liveIcon">
+              <div class="row pe-4 ms-2" style="color: red; font-weight: bold">
+                Live
+              </div>
+              <div>
+                <i class="fa-solid fa-circle" style="color: #ff0000"></i>
+              </div>
+            </div>
             <div>
-              <a href="#" target="_blank" id="livePicturesA">
+              <a href="#" id="livePicturesA" target="_blank">
                 <img src="" alt="Resim" id="livePicture"
               /></a>
             </div>
             <div><p id="liveExplain"></p></div>
           </div>
+          <div class="locationNews">
+            <p class="pt-4 ps-3">Get Location specific News</p>
+            <div class="ms-3 locationNewInput">
+              <input
+                type="text"
+                placeholder="Enter Your Location"
+                id="locationInput"
+              />
+            </div>
+            <div class="ps-3 mt-4 locationNewButton">
+              <button onclick="changeCity()">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="upCarosel mt-lg-5">
+        <p class="me-2">Editor's Picks</p>
+
+        <i class="fa-solid fa-star mt-1"></i>
+      </div>
+      <div class="carouselNews">
+        <!-- carousel -->
+        <div class="carouselNew me-lg-3">
+          <div class="carouselImageDiv me-2">
+            <img
+              src=""
+              alt="carouselPicture1"
+              class="carouselImage"
+              id="carouselImage1"
+            />
+          </div>
+          <div class="carouselHeaderText">
+            <h3 class="carouselHeader" id="carouselheader1">haber1</h3>
+            <p class="carouselText" id="carouselText1">haber1</p>
+          </div>
+        </div>
+        <div class="carouselNew">
+          <div class="carouselImageDiv me-2">
+            <img
+              src=""
+              alt="carouselPicture2"
+              class="carouselImage"
+              id="carouselImage2"
+            />
+          </div>
+          <div class="carouselHeaderText">
+            <h3 class="carouselHeader" id="carouselheader2">haber2</h3>
+            <p class="carouselText" id="carouselText2">haber2</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="buttonNextBack pb-lg-5">
+        <button>ileri</button>
+        <button>geri</button>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container-fluid footer-2 p-lg-5">
+    <div class="row">
+      <div class="col footerLeft me-4">
+        <div class="row colorWhite nbcFooter mb-4">
+          <a href="#">
+            <img src="/pictures/nbcnews_color_2_8.jpg" alt="NBC" id="nbc_image"
+          /></a>
+        </div>
+        <div class="row colorWhite footerUnderImage">
+          copyright  2020 | NBC NEWS
+        </div>
+      </div>
+      <div class="col footerCenter">
+        <div class="row colorWhite">Privacy Policy</div>
+        <div class="row colorWhite">Do not sell my personal info</div>
+        <div class="row colorWhite">Terms of Service</div>
+        <div class="row colorWhite">nbcnews.com Site Map</div>
+      </div>
+      <div class="col">
+        <div class="row footerAbout pt-3 pe-3">
+          <a href="" class="colorWhite">About</a>
+          <a href="" class="colorWhite">Contact</a>
+          <a href="" class="colorWhite">Careers</a>
+          <a href="" class="colorWhite">Caupons</a>
+        </div>
+
+        <div class="row footerAbout pt-3 pe-3 footerIcon">
+          <a href="" class="colorWhite width5vh"
+            ><i class="fa-solid fa-wifi"></i
+          ></a>
+          <a href="" class="colorWhite width5vh"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="" class="colorWhite width5vh"
+            ><i class="fa-brands fa-reddit"></i
+          ></a>
+          <a href="" class="colorWhite width5vh"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
       </div>
     </div>
